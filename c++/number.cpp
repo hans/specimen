@@ -19,6 +19,18 @@
 	// end //
 	
 	// :general: Matrices //
+		int matrix[2][3]; // creates a 2x3 matrix. Matrices of other types (float,
+		// long, etc.) are created analogously. Note: the elements are _not_
+		// guaranteed to be initialized to zero! 
 		
+		// Traverse the matrix, initializing everything to zero:
+		for(int i=0;i<2;i++) {
+		  for(int j=0;j<3;j++) {
+		    matrix[i][j] = 0;
+		  }
+		}
+		
+		// Modify the element in the first row, second column:
+		matrix[0][1] = 12;
 	// end //
 // end //
