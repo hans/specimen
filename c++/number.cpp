@@ -1,6 +1,6 @@
 // :specimen: string.general //
 	// :general: Round a floating-point number //
-	  #include <math.h>
+	  #include <math.h> // Add this line to the top of your program, before main()
 		float n = 0.4f;
 		n = round(n);
 	// end //
@@ -11,8 +11,8 @@
 	// end //
 	
 	// :general: Generate a random number //
-		#include <time.h>
-    #include <stdlib.h>
+		#include <time.h>	// Add these lines to the top of your program, before main()
+    #include <stdlib.h> // "
 		
 		srandom(time(NULL));
 		int o = random() % 10; // => integer in the interval [0,10]
