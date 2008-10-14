@@ -39,12 +39,11 @@
 	// end //
 	
 	// :manipulation: Inverting a hash //
-	  // There's probably a better way to do this, actually. This way isn't
-	  // sound -- elements could be lost if keys/values overlap.
-		foreach($foo as $key => $value) {
-		  $foo[$value] = $key;
-		  unset($foo[$key]);
-		}
+	  // This isn't completely sound -- if a value occurs multiple times,
+	  // the last key is used as it's value, and all the others are *lost*.
+	  // Note: for this to work properly, all the values have to be legal hash
+	  // keys -- i.e., strings or integers.
+	  $foo = array_flip($foo); // => Hash with values => keys.
 	// end //
 	
 	// :manipulation: Merge two hashes //
